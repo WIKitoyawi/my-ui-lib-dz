@@ -1,0 +1,46 @@
+.my-button{
+    border-radius: 8px;
+    cursor: pointer;
+
+    font-size: 18px;
+    transition: all 0.2s ease-in-out;
+}
+
+.my-button--primary{
+    background: royalblue;
+    border: none;
+    color: white;
+}
+
+.my-button--bordered{
+    background: none;
+    border: 1px solid royalblue;
+    color: royalblue;
+}
+
+.my-button--bordered:hover{
+    color:white;
+    background-color: royalblue;
+}
+
+.my-button--primary:hover{
+    background-color: rgb(48, 79, 173);
+}
+
+.my-button--lg {
+    height: 50px;
+    width: 160px;
+    padding: 15px 30px;
+  }
+  
+.my-button--md {
+    height: 40px;
+    width: 150px;
+    padding: 10px 20px;
+}
+  
+.my-button--sm {
+    padding: 5px 10px;
+    height: 30px;
+    width: 150px;
+}
