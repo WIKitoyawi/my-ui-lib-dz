@@ -1,0 +1,40 @@
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .my-label {
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+  }
+  
+  .my-label--danger {
+    color: red;
+  }
+  
+  .my-input {
+    padding: 10px;
+    border: 2px solid lightgray;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .my-input:focus {
+    border-color: royalblue;
+  }
+  
+  .my-input--danger {
+    border-color: red;
+    color: red;
+  }
+  
+  .my-input:disabled {
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+  }
+  

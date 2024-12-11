@@ -44,3 +44,7 @@
     height: 30px;
     width: 150px;
 }
+
+.button-group--spaced {
+    margin-top: 15px;
+}
