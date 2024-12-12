@@ -1,71 +1,68 @@
-/* Стиль для компонента Tooltip */
 .tooltip-container {
-    position: relative;
-    margin-bottom: 20px; /* Чтобы тултипы располагались в одну колонку */
-  }
-  
-  .tooltip-trigger {
-    display: inline-block;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f8f9fa;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .tooltip-trigger:hover {
-    background-color: #e9ecef;
-  }
-  
-  /* Стиль для всплывающей подсказки */
-  .tooltip {
-    position: absolute;
-    background-color: royalblue;
-    color: white;
-    padding: 8px 12px;
-    border-radius: 8px;
-    font-size: 14px;
-    opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    white-space: nowrap;
-    pointer-events: none; /* Чтобы курсор не взаимодействовал с подсказкой */
-    transform: translateY(-10px);
-    z-index: 10;
-  }
-  
-  /* Показываем тултип при наведении */
-  .tooltip-container:hover .tooltip {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  /* Позиции подсказки */
-  .tooltip.top {
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-10px);
-    margin-bottom: 10px;
-  }
-  
-  .tooltip.bottom {
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%) translateY(10px);
-    margin-top: 10px;
-  }
-  
-  .tooltip.left {
-    top: 50%;
-    right: 100%;
-    transform: translateY(-50%) translateX(-10px);
-    margin-right: 10px;
-  }
-  
-  .tooltip.right {
-    top: 50%;
-    left: 100%;
-    transform: translateY(-50%) translateX(10px);
-    margin-left: 10px;
-  }
-  
+  position: relative;
+  display: flex;
+  flex-direction: column; /* Все элементы в колонку */
+  align-items: flex-start; /* Выровнять элементы слева */
+  margin-bottom: 20px; /* Отступы между контейнерами */
+}
+
+.tooltip-trigger {
+  cursor: pointer; /* Указывает, что элемент интерактивен */
+}
+
+.tooltip {
+  position: absolute;
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 10px;
+  white-space: nowrap;
+  font-size: 12px;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.tooltip-trigger:hover + .tooltip,
+.tooltip-trigger:focus + .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Позиции для всплывающих подсказок */
+.tooltip.top {
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 8px;
+}
+
+.tooltip.bottom {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 8px;
+}
+
+.tooltip.left {
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 8px;
+}
+
+.tooltip.right {
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 8px;
+}
+
+/* Центрирование контейнера */
+.tooltip-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px; /* Расстояние между блоками */
+}

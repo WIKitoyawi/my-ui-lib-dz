@@ -4,6 +4,7 @@ import Button from "./components/button";
 import Input from "./components/Input";
 import Heading from "./components/heading/Heading";
 import Tooltip from "./components/Tooltip";
+import Accordion from "./components/accordion";
 
 function App() {
   const [inputValue, setInputValue] = useState("Ivan Ivanov");
@@ -79,32 +80,47 @@ function App() {
       {/* Задание 4: Heading Component */}
       <div className="task">
         <Heading level={2} className="task-title">Heading Component</Heading>
-        <Heading level={1}>Heading 1</Heading>
-        <Heading level={2}>Heading 2</Heading>
-        <Heading level={3}>Heading 3</Heading>
-        <Heading level={4}>Heading 4</Heading>
-        <Heading level={5}>Heading 5</Heading>
-        <Heading level={6}>Heading 6</Heading>
+        <Heading level={1}>H1. Heading 1</Heading>
+        <Heading level={2}>H2. Heading 2</Heading>
+        <Heading level={3}>H3. Heading 3</Heading>
+        <Heading level={4}>H4. Heading 4</Heading>
+        <Heading level={5}>H5. Heading 5</Heading>
+        <Heading level={6}>H6. Heading 6</Heading>
       </div>
 
       {/* Задание 5: Tooltip Component */}
-      <div className="task">
+      <div className="tooltip-wrapper">
         <h2 className="task-title">Tooltip Component</h2>
         <Tooltip text="This is a top tooltip" position="top">
-          Hover me (Top)
-        </Tooltip>
-
-        <Tooltip text="This is a bottom tooltip" position="bottom">
-          Hover me (Bottom)
+          Top Tooltip
         </Tooltip>
 
         <Tooltip text="This is a left tooltip" position="left">
-          Hover me (Left)
+          Left Tooltip
         </Tooltip>
 
         <Tooltip text="This is a right tooltip" position="right">
-          Hover me (Right)
+          Right Tooltip
         </Tooltip>
+
+        <Tooltip text="This is a bottom tooltip" position="bottom">
+          Bottom Tooltip
+        </Tooltip>
+      </div>
+
+        <div>
+        <h2>Accordion Component</h2>
+        <Accordion title="Accordion 1">
+          Content for Accordion 1. Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
+        </Accordion>
+        <Accordion title="Accordion 2" defaultOpen>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat.
+        </Accordion>
       </div>
     </div>
   );

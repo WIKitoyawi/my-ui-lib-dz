@@ -27,6 +27,10 @@
   .my-input:focus {
     border-color: royalblue;
   }
+
+  .my-input--danger:focus{
+    border-color: red;
+  }
   
   .my-input--danger {
     border-color: red;
