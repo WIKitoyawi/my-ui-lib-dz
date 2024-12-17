@@ -1,32 +1,102 @@
+/* Add this to your src/index.css or create a new CSS module */
+
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  background-color: #f8f9fa;
+  font-family: Arial, sans-serif; /* Consistent font for the whole app */
 }
 
-.task {
-  margin: 40px 0; 
-  padding: 20px;
-  background: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.container {
+  max-width: 600px; /* Adjust width as per your design */
+  margin: auto;
+  padding-top: 20px;
 }
 
-.task-title {
-  text-align: center;
+h1 {
   font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
   color: #333;
-}
-
-.button-group--spaced {
-  margin-top: 20px;
-}
-
-.typography {
+  text-align: center;
   margin-bottom: 20px;
+}
+
+input, button {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  box-sizing: border-box; /* Makes sure padding does not affect width */
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker shade for hover effect */
+}
+
+/* Crypto list styles */
+.crypto-item {
+  background-color: #f8f9fa; /* Light gray background */
+  border: 1px solid #dee2e6; /* Light border */
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.crypto-item:hover {
+  background-color: #e9ecef; /* Slightly darker on hover */
+}
+
+.crypto-name {
+  font-size: 18px;
+  color: #212529;
+}
+
+.crypto-price {
+  color: #28a745; /* Green color for positive values */
+}
+
+.crypto-marketcap, .crypto-change {
+  color: #6c757d; /* Gray color for less important info */
+}
+
+
+.tooltip-inner {
+  background-color: royalblue !important; /* Sets the background color */
+}
+
+.bs-tooltip-auto[x-placement^=top] .arrow::before,
+.bs-tooltip-top .arrow::before {
+  border-top-color: royalblue !important; /* Changes the arrow color at the top */
+}
+
+.bs-tooltip-auto[x-placement^=right] .arrow::before,
+.bs-tooltip-right .arrow::before {
+  border-right-color: royalblue !important; /* Changes the arrow color on the right */
+}
+
+.bs-tooltip-auto[x-placement^=bottom] .arrow::before,
+.bs-tooltip-bottom .arrow::before {
+  border-bottom-color: royalblue !important; /* Changes the arrow color at the bottom */
+}
+
+.bs-tooltip-auto[x-placement^=left] .arrow::before,
+.bs-tooltip-left .arrow::before {
+  border-left-color: royalblue !important; /* Changes the arrow color on the left */
+}
+
+/* src/App.css */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white; /* Ensures header background is white */
+  cursor: pointer; /* Better UX indicating it's clickable */
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #ccc;
+  margin-bottom: 5px;
 }
